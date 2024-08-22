@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from tkinter.messagebox import showerror
 import re
 import time
-from modules.save_product_data import save_to_database
+from modules.save_product_data import save_to_file
 
 # Definir una funcion que me permita esperar unos segundos antes de seguir ejecutando codigo
 def time_sleep(seconds = 10):
@@ -143,4 +143,5 @@ def run_bot(email, password, product_id):
     product_description = driver.find_element(By.ID, 'descriptionContainer').text
     driver.quit() # cerrar el webdriver
     
-    save_to_database(product_id, product_name, category_names, product_provider_price, product_suggested_price, product_description, list_url_images)
+    # Guardar la informacion en un archivo
+    save_to_file(product_id, product_name, category_names, product_provider_price, product_suggested_price, product_description, list_url_images)
