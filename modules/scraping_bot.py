@@ -137,7 +137,8 @@ def run_bot(email, password, product_id):
         list_url_images.append(image.get_attribute('src'))
 
     # Eliminar la primera imagen que carga por defecto en la pagina que por lo general es repetida
-    list_url_images.pop(0)
+    if len(list_url_images) > 1:
+        list_url_images.pop(0)
 
     # Seleccionar elemento que contiene la descripcion del producto y extraer el texto
     product_description = driver.find_element(By.ID, 'descriptionContainer').text

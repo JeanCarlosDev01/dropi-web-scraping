@@ -9,7 +9,7 @@ Usando el lenguaje Python y la librería Selenium, he creado este bot automátic
   - Correo electrónico de la cuenta en Dropi.
   - Contraseña de la cuenta Dropi.
   - Ingresar el ID del producto para extraer la información.
-
+* Importente: `chrome version 127.0.6533`
 ##### ¿Dónde se guarda la información?
 La información se guarda en un archivo de texto en el escritorio:
 - `producto-(id).txt`

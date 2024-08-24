@@ -24,6 +24,10 @@ def save_to_file(pr_id='', pr_name='', pr_categories=[], pr_prv_price='', pr_sug
     
     # Crear la ruta del archivo para guardar la informacion
     file_data = f'{desktop}/{pr_id.replace('ID:', 'producto-')}.txt'
+    
+    if (os.path.exists(file_data)):
+        os.remove(file_data)
+    
     # Abrir el archivo y escribir la informacion
     with open(file_data, 'x') as file:
         file.write(text)
