@@ -4,7 +4,8 @@ from selenium.webdriver.common.by import By
 from tkinter.messagebox import showerror
 import re
 import time
-from modules.save_product_data import save_to_file
+
+from save_product_data import save_to_file
 
 # Definir una funcion que me permita esperar unos segundos antes de seguir ejecutando codigo
 def time_sleep(seconds = 10):
